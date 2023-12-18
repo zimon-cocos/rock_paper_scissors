@@ -1,5 +1,4 @@
 let choices = ["ROCK", "PAPER", "SCISSORS"]
-
 let win = 0
 let tie = 0
 let loss = 0
@@ -7,15 +6,24 @@ function getComputerChoice(){
     let random = (choices[Math.floor(Math.random()*choices.length)])
     return random
 }
+const wins = document.getElementById("wins")
+const losses = document.getElementById("losses")
+const ties = document.getElementById("ties")
+
+const rockBtn = document.getElementById("rockBtn")
+const paperBtn = document.getElementById("paperBtn")
+const scissorsBtn = document.getElementById("scissorsBtn")
+
 
 function roundMaker(playerSelection, computerSelection){
-    playerSelection = prompt("Rock, paper or scissors?")
+    //playerSelection = prompt("Rock, paper or scissors?")
     playerSelection = playerSelection.toUpperCase()
-    computerSelection = getComputerChoice()
-
+    //computerSelection = getComputerChoice()
+    wins.innerText = "Wins: " + win
+    losses.innerText = "Losses" + loss
+    ties.innerText = "Ties" + tie
     if (playerSelection === computerSelection){
         ++tie
-        console.log(playerSelection + " vs " + computerSelection + " = TIE!")
         return(playerSelection + " vs " + computerSelection + " = TIE!")
     } 
 
@@ -51,7 +59,36 @@ function roundMaker(playerSelection, computerSelection){
     }
 }
 
-function game(){
+rockBtn.addEventListener("click", e =>{
+    let playerSelection = "ROCK"
+    console.log("The player has selected " + playerSelection)
+    computerSelection = getComputerChoice()
+    console.log("Pc si vybral " + computerSelection)
+    console.log(roundMaker(playerSelection, computerSelection))
+    console.log("Wins " + win + "Losses" + loss + "Ties " + tie)
+    
+})
+
+paperBtn.addEventListener("click",e =>{
+    let playerSelection = "PAPER"
+    console.log(console.log("The player has selected " + playerSelection))
+    computerSelection = getComputerChoice()
+    console.log("Pc si vybral " + computerSelection)
+    console.log(roundMaker(playerSelection, computerSelection)) 
+    console.log("Wins " + win + "Losses" + loss + "Ties " + tie)
+})
+
+scissorsBtn.addEventListener("click",e =>{
+    let playerSelection = "SCISSORS"
+    console.log(console.log("The player has selected " + playerSelection))
+    computerSelection = getComputerChoice()
+    console.log("Pc si vybral " + computerSelection)
+    console.log(roundMaker(playerSelection, computerSelection))
+    console.log("Wins " + win + "Losses" + loss + "Ties " + tie)
+})
+
+
+/*function game(){
     for (let rounds = 0; rounds<6; rounds++){
         roundMaker()
     }
@@ -66,4 +103,6 @@ function game(){
     }
 }
 
-game()
+game()*/
+
+
