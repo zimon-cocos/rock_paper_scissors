@@ -28,7 +28,7 @@ function roundMaker(playerSelection, computerSelection){
     round++
     rounds.innerText = "Round " + round
     
-    if (round == 10){
+    if (win == 5 || loss == 5){
         if (win>loss || win==loss ){
             console.log("Vyhral si / remizoval si a dohral si")
         }
