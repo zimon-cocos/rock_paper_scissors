@@ -2,6 +2,8 @@ let choices = ["ROCK", "PAPER", "SCISSORS"]
 let win = 0
 let tie = 0
 let loss = 0
+let round = 0
+
 function getComputerChoice(){
     let random = (choices[Math.floor(Math.random()*choices.length)])
     return random
@@ -9,6 +11,7 @@ function getComputerChoice(){
 const wins = document.getElementById("wins")
 const losses = document.getElementById("losses")
 const ties = document.getElementById("ties")
+const rounds = document.getElementById("rounds")
 
 const rockBtn = document.getElementById("rockBtn")
 const paperBtn = document.getElementById("paperBtn")
@@ -20,9 +23,23 @@ function roundMaker(playerSelection, computerSelection){
     playerSelection = playerSelection.toUpperCase()
     //computerSelection = getComputerChoice()
     wins.innerText = "Wins: " + win
-    losses.innerText = "Losses" + loss
-    ties.innerText = "Ties" + tie
-    if (playerSelection === computerSelection){
+    losses.innerText = "Losses: " + loss
+    ties.innerText = "Ties: " + tie
+    round++
+    rounds.innerText = "Round " + round
+    
+    if (round == 10){
+        if (win>loss || win==loss ){
+            console.log("Vyhral si / remizoval si a dohral si")
+        }
+
+        else {
+            console.log("Prehral si a dohral si")
+        }
+        
+    }   
+
+    else if (playerSelection === computerSelection){
         ++tie
         return(playerSelection + " vs " + computerSelection + " = TIE!")
     } 
