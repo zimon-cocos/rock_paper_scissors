@@ -1,0 +1,47 @@
+
+
+body{
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.footer{
+    display: flex;
+    background-color:red;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+}
+
+.resultsBox{
+    display: flex;
+    background-color: yellow;
+    flex-direction: column;
+    flex: 1;
+    align-items: start;
+
+}
+
+.buttonTab{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: brown;
+    flex:1;
+}
+
+.resultBox{
+    background-color: white;
+    margin: 8px;
+}
+
+button{
+    height: 9em;
+    width: 60em;
+    margin: 2em;
+}
+

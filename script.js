@@ -31,10 +31,18 @@ function roundMaker(playerSelection, computerSelection){
     if (win == 5 || loss == 5){
         if (win>loss || win==loss ){
             console.log("Vyhral si / remizoval si a dohral si")
+            win = 0
+            loss = 0
+            tie = 0
+            round = 0
         }
 
         else {
             console.log("Prehral si a dohral si")
+            win = 0
+            loss = 0
+            tie = 0
+            round = 0
         }
         
     }   
