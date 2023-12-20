@@ -12,6 +12,7 @@ const wins = document.getElementById("wins")
 const losses = document.getElementById("losses")
 const ties = document.getElementById("ties")
 const rounds = document.getElementById("rounds")
+const computer = document.getElementById("computer")
 
 const rockBtn = document.getElementById("rockBtn")
 const paperBtn = document.getElementById("paperBtn")
@@ -27,6 +28,7 @@ function roundMaker(playerSelection, computerSelection){
     ties.innerText = "Ties: " + tie
     round++
     rounds.innerText = "Round " + round
+    computer.innerText = "The computer has chosen " + computerSelection
     
     if (win == 5 || loss == 5){
         if (win>loss || win==loss ){
