@@ -20,9 +20,7 @@ const scissorsBtn = document.getElementById("scissorsBtn")
 
 
 function roundMaker(playerSelection, computerSelection){
-    //playerSelection = prompt("Rock, paper or scissors?")
     playerSelection = playerSelection.toUpperCase()
-    //computerSelection = getComputerChoice()
     wins.innerText = "Wins: " + win
     losses.innerText = "Losses: " + loss
     ties.innerText = "Ties: " + tie
@@ -91,7 +89,7 @@ rockBtn.addEventListener("click", e =>{
     console.log("The player has selected " + playerSelection)
     computerSelection = getComputerChoice()
     console.log("Pc si vybral " + computerSelection)
-    console.log(roundMaker(playerSelection, computerSelection))
+    roundMaker(playerSelection, computerSelection)
     console.log("Wins " + win + "Losses" + loss + "Ties " + tie)
     
 })
@@ -101,7 +99,7 @@ paperBtn.addEventListener("click",e =>{
     console.log(console.log("The player has selected " + playerSelection))
     computerSelection = getComputerChoice()
     console.log("Pc si vybral " + computerSelection)
-    console.log(roundMaker(playerSelection, computerSelection)) 
+    roundMaker(playerSelection, computerSelection)
     console.log("Wins " + win + "Losses" + loss + "Ties " + tie)
 })
 
@@ -110,7 +108,7 @@ scissorsBtn.addEventListener("click",e =>{
     console.log(console.log("The player has selected " + playerSelection))
     computerSelection = getComputerChoice()
     console.log("Pc si vybral " + computerSelection)
-    console.log(roundMaker(playerSelection, computerSelection))
+    roundMaker(playerSelection, computerSelection)
     console.log("Wins " + win + "Losses" + loss + "Ties " + tie)
 })
 
